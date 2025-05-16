@@ -1,59 +1,65 @@
-Canvas — A Social Media Backend Project
-Overview
-Canvas is a social media web application backend where users can:
+Canvas — Social Media Backend
+A simple and secure social media backend app where users can register, log in, create/edit posts, like posts, and log out.
 
-Register and log in securely
+💻 Demo: https://youtu.be/89RG03w8XaY
 
-Create, edit, and post text-based updates
+🚀 Features
+User Authentication: Secure registration and login
 
-Like posts with visible like counts
+Password Security: Passwords hashed with Bcrypt
 
-Log out safely
+Session Management: Persistent login using JWT tokens stored in cookies
 
-Features
-Passwords are hashed securely using Bcrypt
+Post Management: Create, edit, and like text-based posts with real-time like counts
 
-Uses JWT tokens stored as cookies for persistent sessions
+Protected Routes: Only logged-in users can access certain features
 
-Protected routes restrict access to authenticated users only
+Error Handling: Graceful handling of incorrect login details
 
-Handles incorrect login attempts gracefully
+🛠️ Tech Stack
+Backend: Node.js, Express.js
 
-Tech Stack
-Backend: Node.js, Express.js, MongoDB (via Mongoose), Bcrypt, JWT, Cookie-Parser
+Database: MongoDB with Mongoose
 
-Frontend: EJS templates styled with Tailwind CSS
+Authentication: JWT, Bcrypt
 
-Installation
-Clone the repo:
+Middleware: Cookie-Parser
 
+Frontend: EJS templates with Tailwind CSS
+
+📁 Project Structure
 bash
 Copy
 Edit
-git clone https://github.com/shashank0807/Canvas.git
-Navigate into the directory:
+Canvas/
+│
+├── controllers/          # Route handlers and business logic
+│   └── authController.js
+│   └── postController.js
+│
+├── models/               # Mongoose models (User, Post)
+│   └── User.js
+│   └── Post.js
+│
+├── public/               # Static assets (CSS, JS, images)
+│   └── css/
+│   └── js/
+│
+├── routes/               # Express route definitions
+│   └── authRoutes.js
+│   └── postRoutes.js
+│
+├── views/                # EJS templates for frontend
+│   └── partials/
+│   └── auth/
+│   └── posts/
+│   └── index.ejs
+│
+├── .env                  # Environment variables (not committed)
+├── app.js                # Main Express app setup
+├── package.json          # Project metadata & dependencies
+└── README.md             # Project documentation
 
-bash
-Copy
-Edit
-cd Canvas
-Install dependencies:
+✍️ Author: https://www.linkedin.com/in/shashank0807/
 
-bash
-Copy
-Edit
-npm install
-Set up your environment variables (e.g., MongoDB URI, JWT secret) in a .env file.
 
-Start the server:
-
-bash
-Copy
-Edit
-npm start
-Open your browser at http://localhost:3000
-
-Usage
-Register a new user account.
-
-Log in to create, edit, like posts, and log out.
