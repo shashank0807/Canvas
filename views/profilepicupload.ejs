@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Profile Picture</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+     <div class="w-full min-h-screen text-white p-10 bg-zinc-900">
+        <h1 class="tracking-tighter mb-5 text-3xl mt-10 ">Update Profile Picture.</h1>
+
+        <form class="" action="/upload" method="post" enctype="multipart/form-data" >
+            <input class="outline" type="file" name="image">
+            <input class="bg-blue-500 rounded-md p-3 ml-3" type="submit" value="Upload">
+
+        </form>
+    </div>
+</body>
+</html>
